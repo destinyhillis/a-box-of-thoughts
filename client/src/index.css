@@ -1,0 +1,378 @@
+body {
+  margin: 0;
+  font-family: 'Lato', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  letter-spacing: .1em;
+  color: #666666;
+  height: 100%;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+    monospace;
+}
+
+h1 {
+  font-family: 'Cormorant Garamond', serif;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: lightgray;
+  padding: 20px;
+}
+
+h2 {
+  font-family: 'Cormorant Garamond', serif;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: grey;
+  padding: 30px, 0, 0, 0;
+}
+
+h3 {
+  font-family: 'Cormorant Garamond', serif;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: white;
+  padding: 20px;
+}
+
+h4 {
+  font-family: 'Lato', sans-serif;
+  letter-spacing: .7em;
+  color: white;
+  padding: 20px;
+  height: 15%;
+  text-transform: uppercase;
+  text-align: left;
+}
+
+p {
+  color: grey;
+  font-family: 'Lato', sans-serif;
+}
+
+.input-title {
+  color: lightgrey;
+  font-family: 'Lato', sans-serif;
+  margin-bottom: 0;
+  text-transform: uppercase;
+}
+
+.header {
+  background-image: url('https://source.unsplash.com/random?{abstract}');
+  background-size: cover;
+  background-attachment: fixed;
+  background-position: center top;
+}
+
+#photos {
+  /* line-height: 0; */
+  margin: 3% 0;
+  -webkit-column-count: 3;
+  -webkit-column-gap:   0px;
+  -moz-column-count:    3;
+  -moz-column-gap:      0px;
+  column-count:         3;
+  column-gap:           0px;  
+}
+
+#photos img {
+  width: 100%;
+  height: auto;
+}
+
+.image-options {
+  display: inline;
+  line-height: 0;
+  -webkit-column-count: 1;
+  -webkit-column-gap:   0px;
+  -moz-column-count:    1;
+  -moz-column-gap:      0px;
+  column-count:         1;
+  column-gap:           0px;  
+  vertical-align: middle;
+
+}
+
+.image-options img {
+  height: auto;
+  border: solid white 10px;
+  margin: 15px;
+  width: 28%;
+}
+
+@media (max-width: 1200px) {
+  #photos {
+  -moz-column-count:    4;
+  -webkit-column-count: 4;
+  column-count:         4;
+  }
+}
+@media (max-width: 1000px) {
+  #photos {
+  -moz-column-count:    3;
+  -webkit-column-count: 3;
+  column-count:         3;
+  }
+}
+@media (max-width: 800px) {
+  #photos {
+  -moz-column-count:    2;
+  -webkit-column-count: 2;
+  column-count:         2;
+  }
+}
+@media (max-width: 400px) {
+  #photos {
+  -moz-column-count:    1;
+  -webkit-column-count: 1;
+  column-count:         1;
+  }
+  .image-options {
+    -moz-column-count:    3;
+    -webkit-column-count: 3;
+    column-count:         3;
+    }
+}
+
+#center-images {
+  width: 90%;
+  text-align: center
+}
+
+.button {
+  margin: 10px;
+}
+
+.parent {
+  margin-top: 30px
+}
+
+#parent {
+  margin-top: 30px
+}
+
+@media (min-width: 576px) {
+  #search-modal {
+    max-width: 800px;
+    margin: 1.75rem auto;
+  }
+
+  .app-description {
+    color: white;
+    font-size: 26px;
+    font-family: 'Lato', sans-serif;
+    padding: 20px;
+    border: solid white 1px;
+    background: rgba(0,0,0,0.4);
+  }
+}
+
+.inputs {
+  margin: 10px;
+  background-color: rgba(0,0,0,0.1);
+  border: none;
+  text-align: center;
+  width: 100%;
+}
+
+.home-inputs {
+  background-color: rgba(255,255,255,0.8);
+  width: 80%;
+}
+
+#home-buttons {
+  border: solid white 1px;
+  background-color: black;
+}
+
+textarea {
+  width: 30%;
+}
+
+.add-image-square {
+  width: 90%;
+  height: 200px;
+  border: solid #666666 1px;
+  padding: 50% 5%;
+  margin: 5%;
+}
+
+.btn {
+  font-family: 'Lato', sans-serif;
+  letter-spacing: .1em;
+  margin: 10px;
+  padding: .125rem .5rem;
+}
+
+.inline-block {
+  display: inline-block;
+  width: 50%;
+  padding: 5% 0 15% 0;
+}
+
+
+@media (max-width: 575px) {
+  .inline-block {
+    display: block;
+    width: 100%;
+  }
+
+  .white-background {
+    border-right: none;
+  }
+
+  .app-description {
+    color: white;
+    font-size: 16px;
+    font-family: 'Lato', sans-serif;
+    padding: 20px;
+    border: solid white 1px;
+    background: rgba(0,0,0,0.4);
+  }
+
+  h4 {
+    text-align: center;
+  }
+}
+
+.home {
+  margin-top: -8px;
+  background: url('https://source.unsplash.com/random?{abstract}') no-repeat center center fixed; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  min-height: 100%;
+  background-attachment: fixed;
+  background-position: center top;
+}
+
+.vertical-div-line {
+  border-right: solid lightgrey 1px;
+  padding: 10px 10px 30px 10px;
+}
+
+.row-centered {
+  text-align:center;
+}
+
+.col-centered{
+  float: none;
+  margin: 0 auto;
+}
+
+.black-bkg {
+  background-color: rgba(0,0,0,0.5);
+  padding-top: 40px;
+}
+
+#blk-header {
+  padding-right: 0;
+  padding-left: 0;
+  background: rgba(0,0,0,0.65);
+  margin-right: 0;
+  margin-left: 0;
+}
+
+#navi {
+  margin: 20px;
+}
+
+#grey-h3 {
+  font-size: 1.75rem;
+  color: lightgrey
+}
+
+.board-description {
+  margin: 20px 0;
+  font-family: 'Lato', sans-serif;
+  color: grey;
+}
+
+.board-title {
+  border-bottom: solid lightgrey 1px;
+  display: inline-block;
+}
+
+.board-detail {
+  padding-top: 3%;
+}
+
+.board-div-line {
+  border-right: solid lightgrey 1px; 
+}
+
+.board-buttons {
+  width: 100%;
+}
+
+.outlined {
+  color: grey;
+  border: solid lightgrey 1px;
+}
+
+
+.button-section {
+  padding: 0;
+  margin: 30px 0;
+}
+
+.modal-title {
+  font-family: 'Lato', sans-serif;
+  letter-spacing: .7em;
+  color: lightgrey;
+  text-transform: uppercase;
+  font-size: 1.25rem;
+}
+
+.valign-middle {
+  margin-top: auto;
+  margin-bottom: auto;
+}
+
+.image-on-board {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.img-hover-container {
+  position: relative;
+}
+
+.overlay {
+  position: absolute;
+  /* top: 0; */
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 60px;
+  width: 100%;
+  opacity: 0;
+  transition: .5s ease;
+  background-color:rgba(0,0,0,0.5);
+}
+
+.img-hover-container:hover .overlay {
+  opacity: 1;
+}
+
+.text {
+  color: white;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  text-align: center;
+  border: solid white 1px;
+  border-radius: 5px;
+  padding: 5px;
+}
+
+.highlight {
+  box-shadow:0px 12px 22px 1px #333;
+}
