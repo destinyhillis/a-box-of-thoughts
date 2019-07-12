@@ -1,4 +1,5 @@
 const express = require('express');
+const app = express();
 const bodyParser = require('body-parser');
 const morgan = require('morgan');
 const path = require('path');
@@ -7,7 +8,6 @@ const cors = require('cors');
 const session = require('express-session');
 const MongoDBStore = require('connect-mongodb-session')(session);
 
-const app = express();
 require('./db/db');
 
 const store = new MongoDBStore({
@@ -18,6 +18,8 @@ const store = new MongoDBStore({
 store.on('error', function(error) {
   console.log(error);
 });
+
+app.use(express.static(path.join(__dirname, "client", "build")))
 
 const Unsplash = require('unsplash-js').default;
 
@@ -59,9 +61,8 @@ app.use('/users', userController);
 app.use('/boards', boardController);
 
 
-app.use(express.static(path.join(__dirname, "client", "build")))
-app.get("*", (req, res) => {
-  res.sendFile(path.join(__dirname, "client", "build", "index.html"));
+app.get('*', (req, res) =>{
+  res.sendFile(path.join(__dirname+'/client/build/index.html'));
 });
 
 
