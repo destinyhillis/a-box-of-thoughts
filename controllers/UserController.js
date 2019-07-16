@@ -44,7 +44,7 @@ router.get('/logout', async (req, res) => {
 })
 
 // register
-router.post("", async (req, res)=>{
+router.post("/", async (req, res)=>{
     try{
         const hashedPassword = bcrypt.hashSync(req.body.password, 10);
         req.body.password = hashedPassword;
