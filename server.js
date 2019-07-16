@@ -8,7 +8,6 @@ const cors = require('cors');
 const session = require('express-session');
 const MongoDBStore = require('connect-mongodb-session')(session);
 
-
 require('./db/db');
 
 const store = new MongoDBStore({
@@ -28,7 +27,7 @@ const unsplash = new Unsplash({
   applicationId: process.env.APPLICATION_ID,
   secret: process.env.UNSPLASH_SECRET
 });
-const whitelist = [process.env.REACT_ADDRESS, process.env.REACT_APP_BACKEND_ADDRESS, process.env.MONGODB_URI, "https://api.unsplash.com/search/photos"];
+const whitelist = [process.env.REACT_ADDRESS, process.env.REACT_APP_BACKEND_ADDRESS, process.env.MONGODB_URI, "https://api.unsplash.com/search/photos", "https://a-box-of-thoughts.herokuapp.com"];
 const corsOptions = {
   origin: function (origin, callback) {
     if (whitelist.indexOf(origin) !== -1) {
