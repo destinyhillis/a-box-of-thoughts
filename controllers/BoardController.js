@@ -4,6 +4,7 @@ const User = require('../models/User')
 
 // index
 router.get('/', async (req, res) => {
+    console.log(req, 'req', res, 'res')
     try{
         const usersId = req.session.usersId;
         const currentUserBoards = await User.findById(usersId)
